@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:hint="Event Name"
+            android:id="@+id/event_name"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_mic_black_24dp"
+            android:onClick="getSpeechInput"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_date_range_black_24dp"
+            android:onClick="getDate"
+            android:id="@+id/cal"
+            />
+         <EditText
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:hint="Event Date"
+             android:onClick="getDate"
+             android:id="@+id/dt"
+             android:layout_toEndOf="@id/cal"
+             android:layout_toRightOf="@id/cal"
+             android:layout_alignBottom="@id/cal"
+
+             />
+         </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_schedule_black_24dp"
+                    android:id="@+id/clock"
+                    android:onClick="getTime"
+                    android:layout_marginLeft="90dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Event Time"
+                    android:onClick="getTime"
+                    android:id="@+id/clk"
+                    android:layout_toEndOf="@id/clock"
+                    android:layout_toRightOf="@id/clock"
+                    android:layout_alignBottom="@id/clock"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
